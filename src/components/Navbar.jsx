@@ -58,17 +58,17 @@ const menuItems = [
     {
         listIcon: <Home/>,
         listText: 'Home',
-        listPath: '/'
+        listPath: '/#top'
     },
     {
         listIcon: <Info />,
         listText: 'Resume',
-        listPath: './Resume'
+        listPath: '/#project-cards'
     },
     {
         listIcon: <MailOutlineIcon/>,
         listText: 'Contact',
-        listPath: './Contact'
+        listPath: '/#contact-cards'
     }
 ]
 
@@ -96,6 +96,12 @@ const Navbar = () => {
             <Divider />
             <List>
                 {menuItems.map((listIcon, key) => (
+                    <HashLink
+                    smooth
+                    to={listIcon.listPath}
+                    scroll={(el) => scrollWithOffset(el)}
+                  >
+                  
             
                 <ListItem button key={key} component={Link} to ={listIcon.listPath}>
                     <ListItemIcon className={classes.menuIcon}>
@@ -103,6 +109,7 @@ const Navbar = () => {
                      </ListItemIcon>
                     <ListItemText className={classes.menuText} primary={listIcon.listText}/>
                     </ListItem>
+                    </HashLink>
                     ))}
                 
             </List>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+
 import './App.css';
 import Home from './components/Home';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,11 +12,9 @@ function App() {
     <>
 
     <CssBaseline />
-
-
-    <Route path='/' component={Home} />
-    <Route path='/contact' component={Contact} />
-    <Route path='/resume' component={Resume} />
+<Home />
+<Resume />
+<Contact />
 
     
     

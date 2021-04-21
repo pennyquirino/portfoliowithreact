@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ContactCards from './ContactCards';
-import Navbar from './Navbar';
+
 
 
 // CSS styles with makeStyles
@@ -19,7 +19,7 @@ function Contact () {
     return (
         <div id='contact'>
                <div className={classes.root}>
-                   <Navbar />
+               
                    <ContactCards />
 
                </div>

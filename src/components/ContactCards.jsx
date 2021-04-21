@@ -19,7 +19,7 @@ export default function Projects () {
   const classes = useStyles();
   const checked = windowPos('header');
   return (
-    <div className={classes.root} id="project-cards">
+    <div className={classes.root} id="contact-cards">
       <ImageCard place={contactdata[0]} checked={checked} />
       <ImageCard place={contactdata[1]} checked={checked} />
       
